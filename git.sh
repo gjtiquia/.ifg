@@ -1,3 +1,6 @@
+# git ssh clone template
+git clone git@github.com:gjtiquia/[your-repo-name]
+
 # set git user.name
 git config user.name "GJ Tiquia"
 
