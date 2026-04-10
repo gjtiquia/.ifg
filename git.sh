@@ -44,6 +44,7 @@ git branch --force [branch-name] [new-tip-commit]
 git rm -r *
 
 # create a worktree at <path> checking out existing <branch>
+# this will automatically create a dir at <path>
 # eg. git worktree add ../project-at-some-branch some-branch
 git worktree add [path] [branch]
 
