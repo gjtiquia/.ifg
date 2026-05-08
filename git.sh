@@ -26,6 +26,15 @@ git config --global mergetool.keepBackup false
 # diff tool
 git config --global diff.tool nvimdiff
 
+# merge on pull
+git config pull.rebase false
+
+# rebase on pull
+git config pull.rebase true
+
+# fast-forward only on pull
+git config pull.ff only
+
 # unstaged changes
 git diff
 
