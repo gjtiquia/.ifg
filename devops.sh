@@ -25,3 +25,6 @@ find . -type d | grep pattern
 
 # grep (rg) search directories recursively
 find . -type d | rg pattern
+
+# see the output of a command while piping
+command1 | tee /dev/tty | command2
