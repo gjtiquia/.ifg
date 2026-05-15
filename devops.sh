@@ -10,3 +10,18 @@ ls -l /proc/[pid-number]/cwd
 
 # kill whatever is running at port 3000 by PID
 sudo kill -9 $(sudo lsof -t -i:3000)
+
+# grep search files recursively
+find . -type f | grep pattern
+
+# grep (rg) search files recursively
+find . -type f | rg pattern
+
+# fd search files recursively (case insensitive)
+fd pattern
+
+# grep search directories recursively
+find . -type d | grep pattern
+
+# grep (rg) search directories recursively
+find . -type d | rg pattern
