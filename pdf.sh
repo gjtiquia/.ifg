@@ -19,3 +19,6 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQ
 
 # ghostscript - repair corrupted pdf
 gs -o repaired.pdf -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress input.pdf
+
+# convert markdown to pdf A4 size with smaller margins
+pandoc input.md -o output.pdf -V papersize=a4 -V geometry:margin=1.5cm
