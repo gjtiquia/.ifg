@@ -1,6 +1,12 @@
 # git ssh clone template
 git clone git@github.com:gjtiquia/[your-repo-name]
 
+# git add remote
+git remote add origin git@github.com:gjtiquia/[your-repo-name].git
+
+# git update remote
+git remote set-url origin git@github.com:gjtiquia/[your-repo-name].git
+
 # check github ssh auth status
 ssh -T git@github.com
 
