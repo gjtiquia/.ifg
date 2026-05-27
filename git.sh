@@ -73,6 +73,9 @@ git worktree prune
 # for when you f- up git attributes
 git add --renormalize .
 
+# for when you change remote url and need to reupload LFS objects
+git lfs push --all origin
+
 # find deleted file from git
 # --diff-filter=D means deleted
 git log --all --diff-filter=D -- "**/*search-term*"
