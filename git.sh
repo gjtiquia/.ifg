@@ -79,3 +79,7 @@ git lfs push --all origin
 # find deleted file from git
 # --diff-filter=D means deleted
 git log --all --diff-filter=D -- "**/*search-term*"
+
+# grep git tracked files
+# ignores .git and ignored files => faster than standard grep
+git grep "search-term"
