@@ -28,3 +28,5 @@ adb shell monkey -p [package name] 1
 # Stop app with command
 adb shell am force-stop [package name]
 
+# Screenshot Capture into current directory
+adb exec-out screencap -p > "screenshot_$(date +"%Y-%m-%d_%H.%M.%S").png"
