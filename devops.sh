@@ -40,3 +40,6 @@ ls | rg -i "foo"
 
 # see the output of a command while piping
 command1 | tee /dev/tty | command2
+
+# ssh [A]gent Forwarding
+ssh -A user@ip-address
