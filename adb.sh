@@ -30,3 +30,9 @@ adb shell am force-stop [package name]
 
 # Screenshot Capture into current directory
 adb exec-out screencap -p > "screenshot_$(date +"%Y-%m-%d_%H.%M.%S").png"
+
+# Android Logcat an app filtered by package name using pid
+adb logcat --pid=$(adb shell pidof -s com.your.app)
+
+# Android Logcat by package name, saving into a file, while outputting to stdout
+adb logcat --pid=$(adb shell pidof -s com.your.app) | tee logs.txt
