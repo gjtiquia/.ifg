@@ -1,3 +1,10 @@
+# list files by time
+# -h = [h]uman readable 
+# -la = [l]ong list with hidden files ([a]ll)
+# -t = sort by [t]ime, newest on top
+# | head -n = show top 20 lines
+ls -hlat | head -n 20
+
 # set files in current directory last modified
 # YYYYMMDDhhmm
 touch -t 202606072300 ./***
