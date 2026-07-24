@@ -36,3 +36,9 @@ adb logcat --pid=$(adb shell pidof -s com.your.app)
 
 # Android Logcat by package name, saving into a file, while outputting to stdout
 adb logcat --pid=$(adb shell pidof -s com.your.app) | tee "logcat_$(date +"%Y-%m-%d_%H.%M.%S").txt"
+
+# use top to check CPU and RAM usage
+adb shell top
+
+# check global free RAM in MB
+adb shell free -m

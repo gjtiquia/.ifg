@@ -26,3 +26,6 @@ exiftool '-AllDates+<0:0:$filesequence' -FileOrder Filename -overwrite_original 
 # photo metadata set date - step 3
 # set last created and last modified dates
 exiftool "-FileCreateDate<DateTimeOriginal" "-FileModifyDate<DateTimeOriginal" -overwrite_original .
+
+# create folder / directory with current date and time
+mkdir $(date +"%Y-%m-%d-%H%M")
