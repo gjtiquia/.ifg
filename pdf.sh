@@ -22,3 +22,6 @@ gs -o repaired.pdf -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress input.pdf
 
 # convert markdown to pdf A4 size with smaller margins
 pandoc input.md -o output.pdf -V papersize=a4 -V geometry:margin=1.5cm
+
+# combine images in currrent folder to a pdf
+img2pdf *.jpg -o output.pdf
