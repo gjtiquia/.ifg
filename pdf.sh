@@ -26,5 +26,5 @@ pandoc input.md -o output.pdf -V papersize=a4 -V geometry:margin=1.5cm
 # combine jpg images in currrent folder to a pdf
 img2pdf *.jpg -o output.pdf
 
-# combine jpeg images in currrent folder to a pdf
-img2pdf *.jpeg -o output.pdf
+# combine jpeg images in currrent folder to a pdf named as the current folder
+img2pdf *.jpeg -o "$(basename $PWD).pdf"
