@@ -16,8 +16,8 @@ SetFile -d "10/25/2023 15:30:45" *
 SetFile -m "10/25/2023 15:30:45" *
 
 # photo metadata set date - step 1
-# set all photos in current directory to the same starting time
-exiftool -AllDates="2023:10:25 15:00:00" -overwrite_original .
+# set all photos in current directory to the same starting time, including timezone at the end
+exiftool -AllDates="2023:10:25 15:00:00+08:00" -overwrite_original .
 
 # photo metadata set date - step 2
 # set time by one second forward for each photo in filename order
