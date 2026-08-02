@@ -17,6 +17,10 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
 # ghostscript - compress pdf (second lowest quality)
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
 
+# ghostscript - compress pdf (between /ebook and /screen)
+# overrides the DPI for image resolution (/ebook 150, /screen 72)
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dDownsampleColorImages=true -dColorImageResolution=110 -dDownsampleGrayImages=true -dGrayImageResolution=110 -dDownsampleMonoImages=true -dMonoImageResolution=110 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+
 # ghostscript - repair corrupted pdf
 gs -o repaired.pdf -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress input.pdf
 
