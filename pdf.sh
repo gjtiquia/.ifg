@@ -12,6 +12,7 @@ qpdf input.pdf --pages . 1-3,8-z -- output.pdf
 qpdf --split-pages input.pdf output-%d.pdf
 
 # ghostscript - compress pdf (lowest quality)
+# docs: https://ghostscript.com/blog/optimizing-pdfs.html
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
 
 # ghostscript - compress pdf (second lowest quality)
