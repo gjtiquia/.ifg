@@ -83,3 +83,7 @@ git log --all --diff-filter=D -- "**/*search-term*"
 # grep git tracked files
 # ignores .git and ignored files => faster than standard grep
 git grep "search-term"
+
+# set commit date to now
+# https://stackoverflow.com/questions/9110310/update-git-commit-author-date-when-amending
+git commit --amend --date=now --no-edit
