@@ -14,7 +14,7 @@ adb reboot
 adb install [apk-name.apk]
 
 # Uninstall apk
-adb uninstall [package name]
+adb uninstall [package-name]
 
 # List installed packages
 adb shell pm list packages -3
@@ -23,10 +23,10 @@ adb shell pm list packages -3
 adb shell pm list packages -3 | grep [keyword]
 
 # Start app with adb
-adb shell monkey -p [package name] 1
+adb shell monkey -p [package-name] 1
 
 # Stop app with command
-adb shell am force-stop [package name]
+adb shell am force-stop [package-name]
 
 # Screenshot Capture into current directory
 adb exec-out screencap -p > "screenshot_$(date +"%Y-%m-%d_%H.%M.%S").png"
