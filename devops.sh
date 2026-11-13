@@ -38,6 +38,15 @@ find . -type d | rg pattern
 # search for a filename in current directory, case insensitive, partial match
 ls | rg -i "foo"
 
+# grep search for text in current directory [r]ecursively, with line [n]umber, [i]gnore case
+grep -rni pattern
+
+# grep search for text in current directory, ignores git ignore, [r]ecursively, with line [n]umber, [i]gnore case
+git grep -rni pattern
+
+# grep search (rg) for text in current directory [i]gnore case
+rg -i pattern
+
 # see the output of a command while piping
 command1 | tee /dev/tty | command2
 
