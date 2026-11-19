@@ -52,3 +52,6 @@ command1 | tee /dev/tty | command2
 
 # ssh [A]gent Forwarding
 ssh -A user@ip-address
+
+# loop a command every interval
+while true; do your_command; sleep 5; done
